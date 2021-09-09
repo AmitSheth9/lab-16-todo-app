@@ -1,0 +1,40 @@
+
+body, html {
+    background-color: rgb(222, 226, 181);
+}
+.completedbutton {
+    font-size: 13px;
+    float: right;
+    cursor: pointer;
+}
+
+.clearbutton {
+    font-size: 13px;
+    float: right;
+    cursor: pointer;
+}
+
+.listLi {
+    font-size: 25px;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.listLi:hover {
+    background-color: beige;
+    border-radius: 5px;
+    border-color: 4px solid purple;
+}
+
+button {
+    cursor: pointer;
+}
+
+#todosubmit {
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    height: 5;
+}
