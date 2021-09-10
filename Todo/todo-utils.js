@@ -26,29 +26,35 @@ export function addTodo(todoInput) {
     user.todos.push(todoObject);
     setUser(user);
 }
+
 export function renderList(user) {
+    const listDiv = document.getElementById('listcontainer');
+
+    if (listDiv.childNodes[0]) {
+        listDiv.removeChild(listDiv.childNodes[0]);
+    }
     const ol = document.createElement('ol');
     
     for (let i = 0; i < user.todos.length; i++) {
         const li = document.createElement('li');
         li.classList = 'listLi';
-        const button = document.createElement('button');
-        button.classList = 'completedbutton';
+        const completedButton = document.createElement('button');
+        completedButton.classList = 'completedbutton';
         const input = document.createElement('input');
         input.setAttribute('type', 'checkbox');
         input.style.visibility = 'hidden';
         
         li.textContent = user.todos[i].todo;
-        button.textContent = 'Completed';
+        completedButton.textContent = 'Completed';
         
         //on completed button, change completed to true and highlight completed task, then setUser
-        button.addEventListener('click', () => {
+        completedButton.addEventListener('click', () => {
             user.todos[i].completed = true;
-            li.style.width = '70%';
+            li.style.width = '80%';
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
             //li.style.transition = 'all 2s';
-            button.disabled = true;
+            completedButton.disabled = true;
             input.style.visibility = 'visible';
             input.checked = true;
             setUser(user);
@@ -57,33 +63,20 @@ export function renderList(user) {
         //when user adds new item list renders new again, this remembers the completed tasks
         if (user.todos[i].completed === true) {
             input.style.visibility = 'visible';
-            li.style.width = '90%';
+            li.style.width = '80%';
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
             li.style.transition = 'all 2s';
-            button.disabled = true;
+            completedButton.disabled = true;
             input.checked = true;
         }
 
-        const removeItemButton = document.createElement('button');
-        removeItemButton.classList = 'removeitem';
-        removeItemButton.textContent = 'Remove';
-        
-        removeItemButton.addEventListener('click', () => {
-            delete user.todos[i];
-        });
+       
 
-        li.append(button, input, removeItemButton);
+        li.append(completedButton, input);
         ol.append(li);  
     }
     
     return ol;
 }
     
-export function clearList(ol) {
-    
-}  
-
-export function removeListItem(li) {
-    
-}

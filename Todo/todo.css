@@ -89,24 +89,28 @@ input[type='checkbox'] {
 #flexdiv {
     display: flex;
     margin-bottom: 5%;
+    
+    padding-right: 1%;
 }
 #togglecontainer {
     display: flex;
     font-size: 20px;
-    justify-content: center;
-    
-    
-    
+    float:right;
+
 }
+
+
 .completedbutton {
     font-size: 15px;
     float: right;
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid blue;
+    color: red;
+    background-color: yellow;
 }
 .completedbutton:hover {
-    border: 3px solid blue;
+    border: 2px solid red;
 }
 
 .clearbutton {
@@ -125,4 +129,8 @@ input[type='checkbox'] {
 
 .removeitem:hover {
     border: 3px solid blue;
+}
+
+#listcontainer {
+    margin-bottom: 20%;
 }
