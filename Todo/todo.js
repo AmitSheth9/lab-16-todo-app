@@ -1,8 +1,13 @@
 import { getUser, setUser, addTodo, renderList, clearToDo } from './todo-utils.js';
-
 const todoForm = document.getElementById('todoform');
 const listDiv = document.getElementById('listcontainer');
+const usernameDisplay = document.createElement('p');
+const header = document.querySelector('header');
+header.append(usernameDisplay);
 
+
+const user = getUser();
+usernameDisplay.textContent = `Hello ${user.username}, `;
 
 
 todoForm.addEventListener('submit', (event) => {
