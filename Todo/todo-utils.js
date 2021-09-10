@@ -40,27 +40,40 @@ export function renderList(user) {
         
         li.textContent = user.todos[i].todo;
         button.textContent = 'Completed';
+        
+        //on completed button, change completed to true and highlight completed task, then setUser
         button.addEventListener('click', () => {
             user.todos[i].completed = true;
+            li.style.width = '70%';
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
-            li.style.transition = 'all 2s';
-            setUser(user);
+            //li.style.transition = 'all 2s';
             button.disabled = true;
             input.style.visibility = 'visible';
             input.checked = true;
-
+            setUser(user);
         });
        
+        //when user adds new item list renders new again, this remembers the completed tasks
         if (user.todos[i].completed === true) {
             input.style.visibility = 'visible';
+            li.style.width = '90%';
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
             li.style.transition = 'all 2s';
             button.disabled = true;
             input.checked = true;
         }
-        li.append(button, input);
+
+        const removeItemButton = document.createElement('button');
+        removeItemButton.classList = 'removeitem';
+        removeItemButton.textContent = 'Remove';
+        
+        removeItemButton.addEventListener('click', () => {
+            delete user.todos[i];
+        });
+
+        li.append(button, input, removeItemButton);
         ol.append(li);  
     }
     

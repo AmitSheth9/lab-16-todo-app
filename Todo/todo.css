@@ -1,6 +1,6 @@
 
 body {
-    margin-left:20px;
+    
     background-image: url('../assets/paperback4.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@ body {
     
 }
 header, main {
-  margin-left: 50px;
+  margin-left: 5%;
 }
 header {
     margin-top: 200px;
@@ -19,7 +19,7 @@ header {
 }
 
 h5 {
-    margin-left: 105px;
+    margin-left: 5%;
     font-size: 25px;
     color: blue;
     margin-bottom: 5px;
@@ -31,36 +31,17 @@ h4 {
 main {
     
 }
-#flexdiv {
-    display: flex;
-    
-}
-#togglecontainer {
-    
-    margin-right: 10px;
-    font-size: 20px;
-}
-.completedbutton {
-    font-size: 25px;
-    float: right;
-    cursor: pointer;
-}
 
-.clearbutton {
-    font-size: 25px;
-    float: right;
-    cursor: pointer;
-}
 
 ol {
    
 }
 .listLi {
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     border: 3px solid black;
     margin: 10px;
-    width: 750px;
+    width: 90%;
     border-radius: 5px;
     background-color: yellow;
 }
@@ -80,22 +61,68 @@ button {
 
 #todosubmit {
     cursor: pointer;
-    margin-right: 50px;
-    font-size: 20px;
+    font-size: 18px;
+    float: right;
+    width: 15%;
+    margin-left: 2%;
+
 }
 
 input[type='checkbox'] {
     height: 5;
 }
 
-label {
-    font-size: 25px;
-    color: blue;
-}
 #todoitem {
-    margin-left: 50px;
+    
     font-size: 20px;
     padding: 8px;
-    width: 400px;
-    margin-bottom: 40px;
+    width: 60%;
+    
+}
+
+#todoform {
+    display: flex;
+    float: left;
+    width: 70%;
+    
+}
+#flexdiv {
+    display: flex;
+    margin-bottom: 5%;
+}
+#togglecontainer {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    
+    
+    
+}
+.completedbutton {
+    font-size: 15px;
+    float: right;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+.completedbutton:hover {
+    border: 3px solid blue;
+}
+
+.clearbutton {
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+}
+
+.removeitem {
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    float: right;
+    border: 1px solid blue;
+}
+
+.removeitem:hover {
+    border: 3px solid blue;
 }
