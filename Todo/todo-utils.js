@@ -34,7 +34,7 @@ export function renderList(user) {
         listDiv.removeChild(listDiv.childNodes[0]);
     }
     const ol = document.createElement('ol');
-    
+    //create li, button, and input elements
     for (let i = 0; i < user.todos.length; i++) {
         const li = document.createElement('li');
         li.classList = 'listLi';
@@ -53,6 +53,7 @@ export function renderList(user) {
             li.style.width = '80%';
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
+            li.color = 'black';
             //li.style.transition = 'all 2s';
             completedButton.disabled = true;
             input.style.visibility = 'visible';
@@ -67,6 +68,7 @@ export function renderList(user) {
             li.style.border = '1px solid black';
             li.style.background = 'linear-gradient(beige, lightblue)';
             li.style.transition = 'all 2s';
+            li.color = 'black';
             completedButton.disabled = true;
             input.checked = true;
         }
