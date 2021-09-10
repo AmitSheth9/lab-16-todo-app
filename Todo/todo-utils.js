@@ -37,18 +37,13 @@ export function renderList(user) {
         const input = document.createElement('input');
         input.setAttribute('type', 'checkbox');
         input.style.visibility = 'hidden';
-        const removeButton = document.createElement('button');
-        removeButton.classList = 'clearbutton';
-        removeButton.textContent = 'Hide';
-        removeButton.addEventListener('click', () => {
-            li.remove();
-        });
+        
         li.textContent = user.todos[i].todo;
         button.textContent = 'Completed';
         button.addEventListener('click', () => {
             user.todos[i].completed = true;
             li.style.border = '1px solid black';
-            li.style.background = 'linear-gradient(beige, purple)';
+            li.style.background = 'linear-gradient(beige, red)';
             li.style.transition = 'all 2s';
             setUser(user);
             button.disabled = true;
@@ -60,12 +55,12 @@ export function renderList(user) {
         if (user.todos[i].completed === true) {
             input.style.visibility = 'visible';
             li.style.border = '1px solid black';
-            li.style.background = 'linear-gradient(beige, purple)';
+            li.style.background = 'linear-gradient(beige, red)';
             li.style.transition = 'all 2s';
             button.disabled = true;
             input.checked = true;
         }
-        li.append(button, removeButton, input);
+        li.append(button, input);
         ol.append(li);  
     }
     
