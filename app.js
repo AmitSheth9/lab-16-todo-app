@@ -15,5 +15,5 @@ signupForm.addEventListener('submit', (event) => {
 });
 
 signupSubmit.addEventListener('click', () => {
-    window.location = '../Login/login.html';
+    window.location = './Login/login.html';
 });

@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', (event) => {
     const passLogin = userLogin.get('pass');
         
     if (user.username === usernameLogin && user.password === passLogin) {
-        window.location = '../Todo/todo.html';
+        window.location = './Todo/todo.html';
     }
     else {
         alert('Incorrect Username or Password');

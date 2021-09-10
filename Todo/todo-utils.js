@@ -43,7 +43,7 @@ export function renderList(user) {
         button.addEventListener('click', () => {
             user.todos[i].completed = true;
             li.style.border = '1px solid black';
-            li.style.background = 'linear-gradient(beige, red)';
+            li.style.background = 'linear-gradient(beige, lightblue)';
             li.style.transition = 'all 2s';
             setUser(user);
             button.disabled = true;
@@ -55,7 +55,7 @@ export function renderList(user) {
         if (user.todos[i].completed === true) {
             input.style.visibility = 'visible';
             li.style.border = '1px solid black';
-            li.style.background = 'linear-gradient(beige, red)';
+            li.style.background = 'linear-gradient(beige, lightblue)';
             li.style.transition = 'all 2s';
             button.disabled = true;
             input.checked = true;

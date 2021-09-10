@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     image-rendering: pixelated;
+    background-color: beige;
     
     
 }
@@ -13,6 +14,19 @@ header, main {
 }
 header {
     margin-top: 200px;
+    color: blue;
+    font-size: 30px
+}
+
+h5 {
+    margin-left: 105px;
+    font-size: 25px;
+    color: blue;
+    margin-bottom: 5px;
+}
+
+h4 {
+
 }
 main {
     
@@ -22,44 +36,66 @@ main {
     
 }
 #togglecontainer {
-    display: flex;
+    
     margin-right: 10px;
+    font-size: 20px;
 }
 .completedbutton {
-    font-size: 13px;
+    font-size: 25px;
     float: right;
     cursor: pointer;
 }
 
 .clearbutton {
-    font-size: 13px;
+    font-size: 25px;
     float: right;
     cursor: pointer;
 }
 
+ol {
+   
+}
 .listLi {
     font-size: 20px;
-    padding: 5px;
-    border: 1px solid black;
-    margin: 5px;
-    width: 90%;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 10px;
+    width: 750px;
+    border-radius: 5px;
+    background-color: yellow;
 }
 
 .listLi:hover {
-    background-color: beige;
-    border-radius: 5px;
+    background-color: yellow;
+    
     border-color: 4px solid purple;
+    
 }
-
+.completedbutton {
+    font-size: 20px;
+}
 button {
     cursor: pointer;
 }
 
 #todosubmit {
     cursor: pointer;
-    margin-right: 100px;
+    margin-right: 50px;
+    font-size: 20px;
 }
 
 input[type='checkbox'] {
     height: 5;
+}
+
+label {
+    font-size: 25px;
+    color: blue;
+}
+#todoitem {
+    margin-left: 50px;
+    font-size: 20px;
+    padding: 8px;
+    width: 400px;
+    margin-bottom: 40px;
 }
