@@ -1,11 +1,11 @@
 
 body {
     
-    background-image: url('../assets/paperback4.png');
+    background-image: url('../assets/paperback4.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     image-rendering: pixelated;
-    background-color: beige;
+    background-color: beige;  
     
     
 }
@@ -141,3 +141,10 @@ input[type='checkbox'] {
 #listcontainer {
     margin-bottom: 20%;
 }
+/*
+body{
+    background-image: linear-gradient(#ccc 1px, transparent 1px);
+    background-size: 100% 30px;
+
+  }
+  */

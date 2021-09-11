@@ -1,7 +1,15 @@
-body {
-background-image: url('./assets/signinpad.jpeg');
-background-size: cover;
-}
+
+    body{
+        background-image: linear-gradient(#ccc 1px, transparent 1px);
+        background-size: 100% 40px;
+        background-color: lightyellow;
+        margin-left: 15%;
+            border-left: 2px solid red;
+            height: 900px;
+          
+        
+      }
+
 
 header {
    text-align: center;
@@ -9,6 +17,7 @@ header {
    font-weight: 900;
    color: blue;
    margin-bottom: 10%;
+   background-color: lightyellow;
 }
 
 h3 {
