@@ -37,4 +37,13 @@ input {
 
 #signupsubmit {
     margin-left: 2%;
+    cursor: pointer;
+}
+
+#loginlink {
+    font-size: 130%;
+    color: blue;
+    font-weight: 700;
+    margin-left: 8%;
+    margin-top: 50%;
 }

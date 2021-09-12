@@ -8,7 +8,7 @@ header.append(usernameDisplay);
 
 const user = getUser();
 usernameDisplay.textContent = `Welcome ${user.username}, `;
-
+listDiv.append(renderList(user));
 
 todoForm.addEventListener('submit', (event) => {
     event.preventDefault();
