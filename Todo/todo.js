@@ -7,7 +7,7 @@ header.append(usernameDisplay);
 
 
 const user = getUser();
-usernameDisplay.textContent = `Hello ${user.username}, `;
+usernameDisplay.textContent = `Welcome ${user.username}, `;
 
 
 todoForm.addEventListener('submit', (event) => {
